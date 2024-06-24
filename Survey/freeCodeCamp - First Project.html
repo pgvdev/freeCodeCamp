@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <meta chartset="utf-8"/>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 id="title" class="text-center">First Project on freeCodeCamp</h1>
+        <p id="description" class="description text-center">
+            The Roadmap to Learn Coding!
+        </p>
+      </header>
+      <form id="survey-form">
+        <div class="form-group">
+          <label id="name-label" for="name">Full Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            class="form-control"
+            placeholder="Enter your full name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label id="email-label" for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="form-control"
+            placeholder="Enter your Email Address"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label id="number-label" for="number"
+            >Age<span class="clue">(optional)</span></label
+          >
+          <input
+            type="number"
+            name="age"
+            id="number"
+            min="10"
+            max="99"
+            class="form-control"
+            placeholder="Your Age"
+          />
+        </div>
+        <div class="form-group">
+          <p>What is your prior experience with coding?</p>
+          <select id="dropdown" name="role" class="form-control" required>
+            <option disabled selected value>Select your current experience</option>
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+            <option value="apprentice">Apprentice</option>
+            <option value="preference">Prefer not to say</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <p>What are your goals for learning to code?</p>
+          <label>
+            <input
+              name="goals"
+              value="Build websites/web applications"
+              type="radio"
+              class="input-radio"
+              checked
+            />Build websites/web applications</label
+          >
+          <label>
+            <input
+              name="goals"
+              value="Develop mobile applications"
+              type="radio"
+              class="input-radio"
+            />Develop mobile applications</label
+          >
+
+          <label
+            ><input
+              name="goals"
+              value="Data analysis and visualization"
+              type="radio"
+              class="input-radio"
+            />Data analysis and visualization</label
+          >
+
+          <label
+            ><input
+              name="goals"
+              value="Back-end development"
+              type="radio"
+              class="input-radio"
+            />Back-end development</label
+          >
+        </div>
+
+        <div class="form-group">
+          <p>Did you find the "First Project on freeCodeCamp" instructions clear and easy to follow?</p>
+          <select id="customerSatisfaction" name="customerSatisfaction" class="form-control" required>
+            <option disabled selected value>Select an option</option>
+            <option value="yes">Yes</option>
+            <option value="maybe">Maybe</option>
+            <option value="no">No</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <p>
+            What aspects of the project did you find most helpful?
+            <span class="hint">(Check all that apply)</span>
+          </p>
+
+          <label
+            ><input
+              name="inclination"
+              value="Learning HTML basics"
+              type="checkbox"
+              class="input-checkbox"
+            />Learning HTML basics</label
+          >
+          <label>
+            <input
+              name="inclination"
+              value="Understanding CSS fundamentals"
+              type="checkbox"
+              class="input-checkbox"
+            />Understanding CSS fundamentals</label
+          >
+          <label
+            ><input
+              name="inclination"
+              value="Building a simple user interface"
+              type="checkbox"
+              class="input-checkbox"
+            />Building a simple user interface</label
+          >
+          <label
+            ><input
+              name="inclination"
+              value="The interactive learning environment"
+              type="checkbox"
+              class="input-checkbox"
+            />The interactive learning environment</label
+          >
+        </div>
+
+        <div class="form-group">
+          <p>Any comments or suggestions?</p>
+          <textarea
+            id="opinions"
+            class="input-textarea"
+            name="opinion"
+            placeholder="Enter your comment or suggestion here..."
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <button type="submit" id="submit" class="submit-button">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
