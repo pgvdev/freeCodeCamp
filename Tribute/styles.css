@@ -79,21 +79,21 @@ html {
     text-align: center;
   }
 
-  div {
+  .seperate-content {
     display: flex;
     justify-content: space-between;
   }
 
-  .left {
+  .left, .right {
     flex: 1;
     margin-right: 10px;
     padding: 20px;
+    transition: all ease-in-out 500ms;
   }
 
-  .right {
-    flex: 1;
-    margin-right: 10px;
-    padding: 20px;
+  .left:hover, .right:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
   }
 
   ul {
