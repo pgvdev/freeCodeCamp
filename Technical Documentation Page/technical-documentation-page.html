@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>JavaScript Documentation</header>
+      <ul>
+        <li><a class="nav-link" href="#Introduction">JavaScript
+        </a></li>
+        <li>
+          <a class="nav-link" href="#Getting_started"
+            >Setting Up Your Development Environment</a
+          >
+        </li>
+        <li>
+          <a class="nav-link" href="#data_types_and_variables"
+            >Data Types and Variables</a
+          >
+        </li>
+        <li><a class="nav-link" href="#Operators">Operators</a></li>
+        <li><a class="nav-link" href="#Control_flow_statements">Control Flow Statements</a></li>
+        <li>
+          <a class="nav-link" href="#Functions"
+            >Functions</a
+          >
+        </li>
+        <li><a class="nav-link" href="#Arrays">Arrays</a></li>
+        <li>
+          <a class="nav-link" href="#Objects">Objects</a>
+        </li>
+        <li><a class="nav-link" href="#DOM_manipulation">DOM Manipulation</a></li>
+        <li><a class="nav-link" href="#Event_handling">Event Handling</a></li>
+        <li>
+          <a class="nav-link" href="#Asynchronous_programming"
+            >Asynchronous Programming</a
+          >
+        </li>
+        <li><a class="nav-link" href="#APIs">Working with APIs</a></li>
+        <li><a class="nav-link" href="#Reference">Reference</a></li>
+      </ul>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="Introduction">
+        <header>JavaScript: The Versatile Language for Web Development</header>
+        <article>
+          <p>
+            <strong>JavaScript (JS)</strong> is a high-level, interpreted programming language that is widely used to create dynamic and interactive web pages. It's known for its versatility, allowing you to add functionality to webpages, build complex web applications, and even power server-side scripting environments like Node.js. This comprehensive guide will introduce you to the core concepts of JavaScript through clear explanations and practical code examples.
+          </p>
+
+          <p>
+            JavaScript contains a s standard library of objects, such as Array,
+            Date, and Math, and a core set of language elements such as
+            operators, control structures, and statements. Core JavaScript can
+            be extended for a variety of purposes by supplementing it with
+            additional objects; for example:
+          </p>
+          <ul>
+            <li>
+            <strong>Client-side JavaScript</strong> extends the core language by supplying
+              objects to control a browser and its Document Object Model (DOM).
+              For example, client-side extensions allow an application to place
+              elements on an HTML form and respond to user events such as mouse
+              clicks, form input, and page navigation.
+            </li>
+            <li>
+            <strong>Server-side JavaScript</strong> extends the core language by supplying
+              objects relevant to running JavaScript on a server. For example,
+              server-side extensions allow an application to communicate with a
+              database, provide continuity of information from one invocation to
+              another of the application, or perform file manipulations on a
+              server.
+            </li>
+          </ul>
+        </article>
+      </section>
+      <section class="main-section" id="Getting_started">
+        <header>Setting Up Your Development Environment</header>
+        <article>
+          <p>Before diving into the code, you'll need a way to write and execute JavaScript. Here are some popular options:</p>
+
+          <ul>
+            <li>
+                <strong>Browser Developer Tools:</strong> Most modern browsers come with built-in developer tools that include a JavaScript console. This allows you to write and run small snippets of JavaScript code directly within the browser.
+            </li>
+            <li><strong>Text Editor:</strong> Any basic text editor like Notepad or TextEdit can be used to write JavaScript code. However, for a more efficient workflow, consider using a code editor with syntax highlighting and debugging features like Visual Studio Code or Sublime Text.</li>
+            <li>
+            <strong>JavaScript Development Environment (IDE):</strong> For larger projects, a full-fledged IDE like WebStorm or IntelliJ IDEA can provide advanced features like code completion, refactoring, and integration with build tools.
+            </li>
+          </ul>
+        </article>
+      </section>
+      <section class="main-section" id="data_types_and_variables">
+        <header>Data Types and Variables</header>
+        <article>
+          <p>
+            JavaScript has several fundamental data types that represent different kinds of information. You can declare variables to store these data types and reference them throughout your code.
+          </p>
+          <ul>
+            <li>
+            <strong>Numbers:</strong> Represent numeric values, including integers (whole numbers) and decimals (floating-point numbers).
+                <code>
+                    let age = 25;
+                    let pi = 3.14159;
+                </code>
+            </li>
+            <li><strong>Strings:</strong> Represent sequences of characters, often used for text.
+                <code>
+                    let name = "Alice";
+                    let message = "Hello, world!";
+                </code>
+            </li>
+            <li>
+            <strong>Booleans:</strong> Represent logical values: <i>true</i> or <i>false</i>.
+                <code>
+                    let isLoggedIn = true;
+                    let isNightTime = false;
+                </code>
+            </li>
+            <li>
+                <strong>Undefined:</strong> Represents a variable that has been declared but not yet assigned a value.
+                <code>
+                    let color; // color is declared but undefined
+                </code>
+            </li>
+            <li>
+                <strong>Null:</strong> Represents the intentional absence of a value.
+                <code>
+                    let emptyObject = null; // emptyObject points to nothing
+                </code>
+            </li>
+          </ul>
+        </article>
+      </section>
+      <section class="main-section" id="Operators">
+        <header>Operators</header>
+        <article>
+        <p>Operators are symbols used to perform operations on data. JavaScript provides various operators for arithmetic, comparison, logical operations, and more.</p>
+            <ul>
+                <li>
+                <strong>Arithmetic Operators:</strong> + <i>(addition)</i>, - <i>(subtraction)</i>, * <i>(multiplication)</i>, / <i>(division)</i>, % <i>(modulo - remainder after division)</i>
+                    <code>
+                        let sum = 10 + 5;
+                        let difference = 20 - 7;
+                    </code>
+                </li>
+                <li><strong>Comparison Operators:</strong> == <i>(equal to)</i>, != <i>(not equal to)</i>, < <i>(less than)</i>, > <i>(greater than)</i>, <= <i>(less than or equal to)</i>, >= <i>(greater than or equal to)</i>
+                    <code>
+                        let isEqual = 4 == 4; // true
+                        let isGreater = 8 > 3;  // true
+                    </code>
+                </li>
+                <li><strong>Logical Operators:</strong> && <i>(AND)</i>, || <i>(OR)</i>, ! <i>(NOT)</i>
+                    <code>
+                        let isStudent = isLoggedIn && hasEnrolled; // checks both conditions
+                        let allowAccess = isAdmin || isVIP;  // allows access if either condition is true
+                    </code>
+                </li>
+            </ul>
+        </article>
+      </section>
+      <section class="main-section" id="Control_flow_statements">
+        <header>Control Flow Statements</header>
+        <p>
+        Control flow statements allow you to control the execution flow of your program based on certain conditions.
+        </p>
+        <ul>
+            <li>
+            <strong>if...else:</strong> Executes a block of code if a condition is true, and optionally another block if it's false.
+                <code>
+                    let grade = 85;
+                    if (grade >= 90) {
+                      console.log("Excellent!");
+                    } else {
+                      console.log("Good job!");
+                    }                    
+                </code>
+            </li>
+            <li><strong>switch:</strong> Executes a block of code based on the value of an expression compared to multiple cases.
+                <code>
+                    let day = "Monday";
+                    switch (day) {
+                      case "Monday":
+                        console.log("Start of the week!");
+                        break;
+                      case "Friday":
+                        console.log("TGIF!");
+                        break;
+                      default:
+                        console.log("Just another day.");
+                    }                    
+                </code>
+            </li>
+            <li>
+            <strong>for loop:</strong> Repeats a block of code a specific number of times.
+                <code>
+                    for (let i = 1; i <= 5; i++) {
+                        console.log("Iteration:", i);
+                    }                      
+                </code>
+            </li>
+            <li>
+                <strong>while loop:</strong> Repeats a block of code as long as a certain condition is true.
+                <code>
+                    let count = 0;
+                    while (count < 3) {
+                      console                    
+                </code>
+            </li>
+        </ul>
+      </section>
+      <section class="main-section" id="Functions">
+        <header>Functions</header>
+        <article>
+          <p>
+            Functions are reusable blocks of code that perform specific tasks. You can define functions with parameters (inputs) and return values (outputs).
+            <code>
+                function greet(name) {
+                    console.log("Hello, " + name + "!");
+                  }
+                  
+                  greet("Bob"); // Output: Hello, Bob!                   
+            </code>
+          <p>
+            Functions help in organizing your code, promoting reusability, and making your programs more modular.
+          </p>
+        </article>
+      </section>
+      <section class="main-section" id="Arrays">
+        <header>Arrays</header>
+        <article>
+          <p>
+            Arrays are ordered collections of items that can hold different data types. They are useful for storing lists, sequences, or any collection of related data.
+          </p>
+          <code>
+            let fruits = ["apple", "banana", "orange"];
+            let numbers = [1, 2, 3, 4, 5];
+            
+            console.log(fruits[1]); // Output: banana (accessing element by index)            
+          </code>
+
+          <p>
+            You can access individual elements in an array using their numerical index starting from 0. Arrays also provide methods for adding, removing, and manipulating elements.
+          </p>
+        </article>
+      </section>
+      <section class="main-section" id="Objects">
+        <header>Objects</header>
+        <article>
+          <p>
+            Objects are collections of key-value pairs, where keys are unique identifiers (usually strings) and values can be any data type. They are often used to represent real-world entities or complex data structures.
+          </p>
+          <code>
+            let person = {
+                name: "John Doe",
+                age: 30,
+                city: "New York"
+              };
+              
+              console.log(person.name); // Output: John Doe (accessing property by key)              
+          </code>
+          <p>
+            Objects allow you to group related data under a single entity and provide flexibility in data organization.
+          </p>
+        </article>
+      </section>
+      <section class="main-section" id="DOM_manipulation">
+        <header>DOM Manipulation (Document Object Model)</header>
+        <article>
+          <p>
+            JavaScript shines in its ability to interact with the web page's content.  The Document Object Model (DOM) represents the structure of an HTML document, and JavaScript provides methods to access and modify this structure dynamically.
+          </p>
+
+          <code>
+            // Get a reference to the element with id="heading"
+            let heading = document.getElementById("heading");
+            
+            // Change the text content of the heading
+            heading.textContent = "Welcome to the Dynamic Page!";
+            
+            // Get all elements with the class name "button"
+            let buttons = document.getElementsByClassName("button");
+            
+            // Add a click event listener to each button
+            for (let button of buttons) {
+              button.addEventListener("click", function() {
+                console.log("Button clicked!");
+              });
+            }            
+          </code>
+          <p>
+            By manipulating the DOM, JavaScript can update content, add or remove elements, respond to user interactions, and create a truly dynamic user experience.
+          </p>
+        </article>
+      </section>
+      <section class="main-section" id="Event_handling">
+        <header>Event Handling</header>
+        <article>
+            <p>Events are user actions or occurrences within the web page, such as clicks, mouse movements, form submissions, or page loading. JavaScript allows you to define event listeners that respond to these events and execute specific code blocks.
+
+            We saw a glimpse of event handling in the DOM manipulation example. Here's another scenario:</p>
+            <code>
+                let button = document.getElementById("submit-button");
+
+                button.addEventListener("click", function() {
+                  // Validate form data before submission
+                  // Perform actions based on form submission
+                  console.log("Form submitted!");
+                });                
+            </code>
+            <p>Event handling is crucial for creating interactive web pages that react to user input and provide a more engaging user experience.
+
+                This technical documentation provides a foundational understanding of core JavaScript concepts. As you progress, you can delve deeper into topics like asynchronous programming, object-oriented programming principles, working with APIs (Application Programming Interfaces), and building more complex web applications with JavaScript frameworks or libraries.</p>
+      </section>
+      <section class="main-section" id="Asynchronous_programming">
+        <header>Asynchronous Programming</header>
+        <article>
+          <p>
+            Web applications often involve fetching data from servers, handling user interactions that take time (like network requests), or updating the UI without interrupting the user's flow. Asynchronous programming allows JavaScript to handle these situations efficiently without blocking the main thread of execution.
+          </p>
+
+          <ul>
+            <li>
+            <strong>Callbacks:</strong> A traditional approach where a function (callback) is passed as an argument and executed once the asynchronous operation completes.
+                <code>
+                    function fetchData(url, callback) {
+                        // Simulate asynchronous operation (e.g., network request)
+                        setTimeout(() => {
+                          const data = { message: "Data retrieved successfully!" };
+                          callback(data);
+                        }, 1000); // Simulate delay for demonstration
+                      }
+                      
+                      fetchData("https://api.example.com/data", function(data) {
+                        console.log("Received data:", data);
+                      });                      
+                </code>
+            </li>
+            <li><strong>Promises:</strong> A more modern approach that provides a cleaner syntax and better error handling for asynchronous operations. Promises represent the eventual completion (or failure) of an asynchronous task and allow chaining operations.
+                <code>
+                    function fetchData(url) {
+                        return new Promise((resolve, reject) => {
+                          setTimeout(() => {
+                            const data = { message: "Data retrieved successfully!" };
+                            resolve(data);
+                          }, 1000); // Simulate delay for demonstration
+                        });
+                      }
+                      
+                      fetchData("https://api.example.com/data")
+                        .then(data => console.log("Received data:", data))
+                        .catch(error => console.error("Error fetching data:", error));                      
+                </code>
+            </li>
+            <li><strong>Async/Await:</strong> A syntactic sugar built on top of Promises that simplifies asynchronous code and makes it look more synchronous.
+                <code>
+                    async function fetchData(url) {
+                        const response = await fetch(url);
+                        const data = await response.json();
+                        return data;
+                      }
+                      
+                      (async () => {
+                        try {
+                          const data = await fetchData("https://api.example.com/data");
+                          console.log("Received data:", data);
+                        } catch (error) {
+                          console.error("Error fetching data:", error);
+                        }
+                      })();                      
+                </code>
+            <p>Asynchronous programming is essential for building responsive and efficient web applications that handle user interactions and data flow smoothly.</p>
+            </li>
+        </ul>
+        </article>
+      </section>
+      <section class="main-section" id="APIs">
+        <header>Working with APIs</header>
+        <article>
+          <p>
+            APIs are sets of methods, functions, and protocols that allow communication between your web application and external services or data sources. JavaScript provides tools to fetch data from APIs, send requests, and handle responses.
+          </p>
+
+          <code>
+            fetch("https://api.example.com/data")
+            .then(response => response.json())
+            .then(data => console.log("API data:", data))
+            .catch(error => console.error("Error fetching data:", error));          
+          </code>
+          <p>
+            By utilizing APIs, you can integrate various functionalities and data sources into your web applications, enriching the user experience.
+          </p>
+        </article>
+      </section>
+
+      <section class="main-section" id="Reference">
+        <header>Reference</header>
+        <article>
+          <ul>
+            <li>
+              All the documentation in this page is taken from
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
+                target="_blank"
+                >MDN</a
+              >
+            </li>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
