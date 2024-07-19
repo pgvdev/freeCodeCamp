@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pgvdev web developer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav id="navbar">
+    <ul>
+      <li><a href="#welcome-section">Welcome</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="https://github.com/pgvdev" id="profile-link" target="_blank">GitHub</a></li>
+    </ul>
+  </nav>
+
+  <div id="welcome-section" class="slideshow-container">
+    <div class="mySlides fade">
+      <img src="./2107.m04.i033.n018.jpg" style="width:100%">
+    </div>
+    <div class="mySlides fade">
+      <img src="./Hands holding symbols of different programming languages.jpg" style="width:100%">
+    </div>
+    <div class="mySlides fade">
+      <img src="./Web 18.svg" style="width:100%">
+    </div>
+    <div class="mySlides fade">
+        <img src="./WebDevelopmentConceptByBarsrsind_light.svg" style="width:100%">
+      </div>
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-grid">
+    <div class="project-tile">
+      <h3>Product Landing Page</h3>
+      <a href="https://github.com/pgvdev/freeCodeCamp/tree/main/Product%20Landing%20Page" 
+      alt="project" target="_blank">
+      <img id="product-image" 
+           class="project-image" 
+           src="./10570 - Landing Page.svg"
+           width="300"
+           height="300">
+           <button class="project-btn">View Project</button> 
+    </a>
+    </div>
+    <div class="project-tile">
+        <h3>Technical Documentation Page</h3>
+        <a href="https://github.com/pgvdev/freeCodeCamp/tree/main/Technical%20Documentation%20Page"
+        alt="project" target="_blank">
+        <img id="product-image" 
+           class="project-image" 
+           src="./Business.svg"
+           width="300"
+           height="300">
+           <button class="project-btn">View Project</button> 
+    </a>
+      </div>
+    <div class="project-tile">
+      <h3>Survey</h3>
+      <a href="https://github.com/pgvdev/freeCodeCamp/tree/main/Survey" 
+      alt="project" target="_blank">
+      <img id="product-image" 
+           class="project-image" 
+           src="./Clipboard survey.svg"
+           width="300"
+           height="300">
+           <button class="project-btn">View Project</button> 
+    </a>
+    </div>
+    <div class="project-tile">
+        <h3>Tribute</h3>
+        <a href="https://github.com/pgvdev/freeCodeCamp/tree/main/Tribute"
+        alt="project" target="_blank">
+        <img id="product-image" 
+           class="project-image" 
+           src="./2-Labor-day+glyph-3.svg"
+           width="300"
+           height="300">
+           <button class="project-btn">View Project</button> 
+    </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 pgvdev. All rights reserved.</p>
+  </footer>
+
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let slides = document.getElementsByClassName("mySlides");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      slides[slideIndex-1].style.display = "block";  
+      setTimeout(showSlides, 30000); // Change image every 30 seconds
+    }
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+  </script>
+
+</body>
+</html>

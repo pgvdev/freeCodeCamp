@@ -1,0 +1,226 @@
+/* Basic style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  
+  /* Style the navbar */
+  #navbar {
+    background-color: #333;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: background-color 0.3s;
+  }
+  
+  #navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+  }
+  
+  #navbar li {
+    margin: 0 15px;
+  }
+  
+  #navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 14px 20px;
+    display: block;
+  }
+  
+  #navbar a:hover {
+    background-color: #575757;
+  }
+  
+  /* Welcome section styles
+  #welcome-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  #welcome-section h1 {
+    font-size: 3em;
+    animation: slideIn 1s ease-in-out;
+  } */
+
+  /* Slideshow container */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .mySlides {
+    display: none;
+    height: 100vh;
+  }
+  
+  .mySlides img {
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+  /* Next and previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  
+  /* Projects section styles */
+
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    place-items: center;
+  }
+
+  #projects {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    animation: fadeIn 2s ease-in-out;
+  }
+
+  #projects .project-btn {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100px;
+    height: 20px;
+  }
+
+  #projects h2 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .project-tile {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+  }
+  
+  .project-tile:hover {
+    transform: scale(1.05);
+  }
+  
+  .project-tile h3 {
+    margin-bottom: 10px;
+  }
+  
+  .project-tile a {
+    text-decoration: none;
+    color: #007acc;
+    transition: color 0.3s;
+  }
+  
+  .project-tile a:hover {
+    color: #005f99;
+    text-decoration: underline;
+  }
+  
+  /* Footer styles */
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  /* Media queries */
+  @media (max-width: 768px) {
+    #navbar ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    #navbar li {
+      margin: 10px 0;
+    }
+  
+    #welcome-section h1 {
+      font-size: 2em;
+    }
+  
+    .project-tile {
+      margin: 20px 10px;
+    }
+  }
+  
